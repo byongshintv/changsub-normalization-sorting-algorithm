@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #canvas {
+            border: 1px solid #000;
+        }
+
+        #canvas-label {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 6px 12px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            font-size: 20px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 6px 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form id="presetForm">
+        <p>
+            <label for="frameDuration">Frame Duration (ms):</label>
+            <input type="number" id="frameDuration" value="66">
+        </p>
+        <p>
+            <label for="slowInterval">Slow Interval:</label>
+            <input type="number" id="slowInterval" value="22">
+        </p>
+        <p>
+            <label for="fastInterval">Fast Interval:</label>
+            <input type="number" id="fastInterval" value="10">
+        </p>
+        <p>
+            <label for="slowN">Slow N:</label>
+            <input type="number" id="slowN" value="256">
+        </p>
+        <p>
+            <label for="fastN">Fast N:</label>
+            <input type="number" id="fastN" value="192">
+        </p>
+        <button type="button" onclick="execute()">execute</button>
+    </form>
+    <canvas id="canvas"></canvas>
+    <div id="canvas-label"></div>
+    <script src="./stratgy.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
